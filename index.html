@@ -6,21 +6,53 @@
 
 <meta charset="UTF-8">
 <style>
+body {
+    margin-left: 50px;
+    margin-top: 50px;
 
-body {background-color: rgb(15, 30, 95);
- font-family: "Courier New", Courier, monospace;
+    background-color: rgb(15, 30, 95);
+    font-family: "Courier New", Courier, monospace;
 }
+
 h1   {color: rgb(255, 255, 255);}
 h2   {color: rgb(255, 255, 255);}
 p    {color: rgb(236, 232, 215);}
 li   {color: rgb(236, 232, 215);}
 a    {color: rgb(255, 234, 138);}
+
+.split-section {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    height: 500px;          /* fixed height for this section */
+    position: relative;     /* anchor for the image */
+}
+
+.text {
+    width: 100%;
+    z-index: 2;
+}
+
+.image {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.image img {
+    position: absolute;
+    max-width: 200%;
+    top: 55%;
+    transform: translateY(-50%);
+}
 </style>
 
 </head>
 <body>
-
-<h1>Pierre Pébereau</h1>
+<div class="split-section">
+    <div class="text">
+ <h1>Pierre Pébereau</h1>
 <p> pierre.pebereau[at]esat.kuleuven.be</p>
 <p> B01.29 </p>
 <p> <a href= "https://github.com/pi-r2"> GitHub </a> </p>
@@ -43,6 +75,13 @@ a    {color: rgb(255, 234, 138);}
   You can find my resume <a href="./docs/cv_pebereau.pdf">here</a>.</p>
 </p>
 <hr>
+
+   </div>
+
+    <div class="image">
+        <img src="pics/background.svg" alt="Illustration">
+    </div>
+</div>
 
 <h2> Software </h2>
 <hr>
